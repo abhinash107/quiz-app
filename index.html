@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="custom.css">
+  <link rel="manifest" href="mainfest.json">
+  <title>Quiz App</title>
+  
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h2 id="question">Question text</h2>
+    <div id="answer-buttons">
+      <!-- Answer buttons inserted here -->
+    </div>
+    <button id="next-btn" class="btn hide">Next</button>
+  </div>
+
+  <script src="app.js"> </script>
+  
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js")
+      .then(reg => console.log("Service Worker registered:", reg))
+      .catch(err => console.error("Service Worker failed:", err));
+  }
+</script>
+</body>
+</html>
